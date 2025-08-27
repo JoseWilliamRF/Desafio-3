@@ -16,12 +16,13 @@ body {
 main {
   padding: 1rem;
 }
+
 /* HERO */
 .container {
   display: grid;
-  justify-content: space-between;
-  background-color: white;
-  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  background-color: #ffffff;
+  grid-template-columns: 1fr 1fr;
   max-width: 500px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px 2px rgba(0, 0, 0, 0.178);
@@ -103,12 +104,10 @@ main {
   padding-left: 2rem;
   padding-right: 2rem;
   flex-direction: column;
-  width: 15.62rem;
   height: 100%;
 }
 
 .teste1 {
-  /* border: solid red 1px; */
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   font-weight: 800;
@@ -127,10 +126,16 @@ img {
 .cinza {
   color: hsl(241, 100%, 89%);
 }
+
+.end {
+  margin-left: auto;
+}
+
 .teste2 {
+  display: flex;
   background-color: hsla(0, 100%, 67%, 0.12);
   border-radius: 10px;
-  word-spacing: 45px;
+  /* word-spacing: 45px; */
   padding: 6px;
   font-size: 0.87rem;
   color: hsl(0, 100%, 67%);
@@ -139,6 +144,7 @@ img {
 }
 
 .teste3 {
+  display: flex;
   background-color: hsla(39, 100%, 56%, 0.12);
   border-radius: 5px;
   word-spacing: 48px;
@@ -149,6 +155,7 @@ img {
   margin-bottom: 12px;
 }
 .teste4 {
+  display: flex;
   background-color: hsla(166, 100%, 37%, 0.12);
   border-radius: 5px;
   word-spacing: 58px;
@@ -159,6 +166,7 @@ img {
   margin-bottom: 12px;
 }
 .teste5 {
+  display: flex;
   background-color: hsla(234, 85%, 45%, 0.11);
   border-radius: 5px;
   word-spacing: 60px;
@@ -183,4 +191,26 @@ img {
   cursor: pointer;
 
   background: linear-gradient(rgb(121, 87, 255), rgb(46, 43, 233));
+}
+@media screen and (max-width: 400px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .botao {
+    margin-bottom: 20px;
+  }
+
+  .teste1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-self: center;
+  }
+  .hero {
+    border-radius: 0px 0px 20px 20px;
+  }
+
+  .teste2 {
+    justify-self: space-between;
+  }
 }
